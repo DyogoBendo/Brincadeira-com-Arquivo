@@ -65,6 +65,11 @@ void adiciona_tarefa()
         cout << "Digite uma nova tarefa: ";
         cin.ignore();
         getline(cin, tarefa);
+        
+        if (tarefa[0] >= 'a' && tarefa [0] <='z')
+        {
+            tarefa[0] = _toupper(tarefa[0]);
+        }
 
         arquivo_adicionar << tarefa << endl;
 
